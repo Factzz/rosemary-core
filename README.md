@@ -54,7 +54,7 @@ Long-term stability is our priority.
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/your-username/rosemary-core.git](https://github.com/your-username/rosemary-core.git)
+    git clone [https://github.com/Factzz/rosemary-core.git](https://github.com/Factzz/rosemary-core.git)
     ```
 2.  **Flash Firmware**
     * Open the project in **VS Code** with **PlatformIO**.
@@ -108,7 +108,7 @@ Long-term stability is our priority.
 
 1.  **ดาวน์โหลดโค้ด**
     ```bash
-    git clone [https://github.com/your-username/rosemary-core.git](https://github.com/your-username/rosemary-core.git)
+    git clone [https://github.com/Factzz/rosemary-core.git](https://github.com/Factzz/rosemary-core.git)
     ```
 2.  **อัปโหลด Firmware**
     * เปิดโปรเจกต์ด้วย **VS Code** + **PlatformIO**
@@ -129,5 +129,6 @@ Long-term stability is our priority.
 Copyright (c) 2026 **Rosemary OS Team**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files... (see LICENSE file for details).
+
 
 > **Note:** This is the Community Edition. The "Pro" version with AI Doctor, Milo Cube Radar support, and Glassmorphism UI is a separate commercial product.
