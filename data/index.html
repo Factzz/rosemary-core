@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosemary Core</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cli-header">
+        <div class="brand">Rosemary_Core</div>
+        <div class="status-indicator">● ONLINE</div>
+    </div>
+
+    <div class="sys-grid">
+        <div class="stat-box"><span class="stat-label">VPD (kPa)</span><div class="stat-val" id="vpd-val">--</div></div>
+        <div class="stat-box"><span class="stat-label">TEMP (°C)</span><div class="stat-val" id="temp-val">--</div></div>
+        <div class="stat-box"><span class="stat-label">HUM (%)</span><div class="stat-val" id="hum-val">--</div></div>
+    </div>
+
+    <div class="cmd-line">$ ./list_plants --status=live</div>
+    <div id="plant-list" class="plant-list">
+        </div>
+
+    <div class="add-box" onclick="app.openAdd()">+ ADD_NEW_NODE</div>
+
+    <div style="margin-top:30px; display:flex; gap:10px; justify-content:center;">
+        <button onclick="app.openWifi()">[WIFI_CONFIG]</button>
+        <button onclick="app.reboot()" style="color:var(--danger)">[SYSTEM_REBOOT]</button>
+    </div>
+
+    <div class="footer">
+        Rosemary Core v1.0 (tuscan) | Open Source Kernel
+    </div>
+
+    <div class="modal-overlay" id="modal-add">
+        <div class="modal-box">
+            <div class="modal-title">NEW_PLANT</div>
+            <input type="text" id="new-name" placeholder="Enter Name...">
+            <div class="modal-btns">
+                <button onclick="app.closeModals()">CANCEL</button>
+                <button onclick="app.addPlant()" style="border-color:var(--accent); color:var(--accent)">CONFIRM</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-wifi">
+        <div class="modal-box">
+            <div class="modal-title">WIFI_SETUP</div>
+            <input type="text" id="wifi-ssid" placeholder="SSID">
+            <input type="password" id="wifi-pass" placeholder="PASSWORD">
+            <div class="modal-btns">
+                <button onclick="app.closeModals()">CANCEL</button>
+                <button onclick="app.saveWifi()">CONNECT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

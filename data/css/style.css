@@ -1,0 +1,61 @@
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --text-primary: #58a6ff;
+    --text-sec: #8b949e;
+    --border: #30363d;
+    --accent: #238636;
+    --danger: #da3633;
+    --warning: #d29922;
+}
+
+* { box-sizing: border-box; font-family: 'Courier New', monospace; -webkit-tap-highlight-color: transparent; }
+body { background: var(--bg-color); color: var(--text-sec); margin: 0; padding: 20px; max-width: 800px; margin: 0 auto; }
+
+/* Terminal Header */
+.cli-header { border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+.brand { font-size: 1.2rem; font-weight: bold; color: var(--text-primary); }
+.brand::before { content: ">_ "; color: var(--accent); }
+.status-indicator { font-size: 0.8rem; color: var(--accent); }
+
+/* System Stats */
+.sys-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 30px; }
+.stat-box { background: var(--card-bg); padding: 10px; border: 1px solid var(--border); border-radius: 4px; text-align: center; }
+.stat-label { font-size: 0.7rem; color: var(--text-sec); display: block; margin-bottom: 5px; }
+.stat-val { font-size: 1.1rem; font-weight: bold; color: #f0f6fc; }
+
+/* Plant List (Table Style) */
+.cmd-line { color: var(--text-sec); margin-bottom: 10px; font-size: 0.9rem; }
+.plant-list { display: flex; flex-direction: column; gap: 10px; }
+.plant-row { background: var(--card-bg); border: 1px solid var(--border); padding: 15px; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; }
+.p-info { display: flex; flex-direction: column; gap: 4px; }
+.p-name { color: #f0f6fc; font-weight: bold; font-size: 1rem; }
+.p-meta { font-size: 0.8rem; color: var(--text-sec); }
+.p-val { font-size: 1.2rem; font-weight: bold; color: var(--accent); min-width: 60px; text-align: right; }
+
+/* Status Indicators */
+.tag { font-size: 0.7rem; padding: 2px 6px; border-radius: 2px; border: 1px solid; margin-left: 5px; }
+.tag.water { border-color: var(--text-primary); color: var(--text-primary); }
+.tag.err { border-color: var(--danger); color: var(--danger); }
+.tag.dry { border-color: var(--warning); color: var(--warning); }
+
+/* Controls */
+.actions { display: flex; gap: 10px; margin-top: 5px; }
+button { background: transparent; border: 1px solid var(--border); color: var(--text-primary); padding: 5px 10px; cursor: pointer; font-size: 0.8rem; transition: 0.2s; }
+button:hover { background: #1f6feb22; border-color: var(--text-primary); }
+button:active { background: var(--text-primary); color: white; }
+.btn-del { color: var(--danger); border-color: var(--border); }
+.btn-del:hover { border-color: var(--danger); background: #da363322; }
+
+/* Add New */
+.add-box { margin-top: 20px; padding: 15px; border: 1px dashed var(--border); text-align: center; cursor: pointer; color: var(--text-sec); transition: 0.2s; }
+.add-box:hover { border-color: var(--text-primary); color: var(--text-primary); }
+
+/* Modals (Simple) */
+.modal-overlay { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); display:none; justify-content:center; align-items:center; z-index:99; }
+.modal-box { background: var(--bg-color); border: 1px solid var(--text-primary); padding: 20px; width: 300px; box-shadow: 0 0 20px rgba(88, 166, 255, 0.2); }
+.modal-title { color: var(--text-primary); font-weight: bold; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+input { background: var(--card-bg); border: 1px solid var(--border); color: white; width: 100%; padding: 8px; margin-bottom: 10px; }
+.modal-btns { display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px; }
+
+.footer { margin-top: 40px; border-top: 1px solid var(--border); padding-top: 10px; text-align: center; font-size: 0.7rem; color: var(--border); }
