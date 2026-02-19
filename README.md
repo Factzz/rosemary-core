@@ -131,4 +131,5 @@ Copyright (c) 2026 **Rosemary OS Team**
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files... (see LICENSE file for details).
 
 
-> **Note:** This is the Community Edition. The "Pro" version with AI Doctor, Milo Cube Radar support, and Glassmorphism UI is a separate commercial product.
+> **Note:** This is the Community Edition. The "Product" version with AI Doctor, Cube Radar support, Store, Apps and Glassmorphism UI is a separate commercial product.
+
